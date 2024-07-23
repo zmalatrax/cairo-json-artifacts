@@ -12,8 +12,9 @@ The `src` folder contains the Cairo programs `*.cairo`, the Sierra file `*.sierr
 
 ## Makefile - Usage
 
-- To build the compiler use `make build`.
-- To compile all Cairo files in `src/`, use `make compile`
-
-To only build the `cairo-compile` bin, use `make build-cairo-compiler`.
-To only build the `sierra-compile-json` bin, use `make build-sierra-compiler`.
+| Makefile target command      | Description                                                 |
+| ---------------------------- | ----------------------------------------------------------- |
+| `make build`                 | Compiles `cairo-compile` and `sierra-compile-json` binaries |
+| `make compile`               | Compile all Cairo programs in `src/`                        |
+| `make build-cairo-compiler`  | Compile `cairo-compile` binary                              |
+| `make build-sierra-compiler` | Compile `sierra-compile-json` binary                        |
