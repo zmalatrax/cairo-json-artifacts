@@ -6,6 +6,7 @@ type RangeCheck = RangeCheck [storable: true, drop: false, dup: false, zero_size
 type Const<u64, 700> = Const<u64, 700> [storable: false, drop: false, dup: false, zero_sized: false];
 type Const<u64, 600> = Const<u64, 600> [storable: false, drop: false, dup: false, zero_sized: false];
 type Const<u64, 500> = Const<u64, 500> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<felt252, 280991720293> = Const<felt252, 280991720293> [storable: false, drop: false, dup: false, zero_sized: false];
 type Const<u64, 100> = Const<u64, 100> [storable: false, drop: false, dup: false, zero_sized: false];
 type Felt252DictEntry<u64> = Felt252DictEntry<u64> [storable: true, drop: false, dup: false, zero_sized: false];
 type Const<felt252, 358251065198> = Const<felt252, 358251065198> [storable: false, drop: false, dup: false, zero_sized: false];
@@ -23,6 +24,7 @@ libfunc drop<u64> = drop<u64>;
 libfunc const_as_immediate<Const<u64, 100>> = const_as_immediate<Const<u64, 100>>;
 libfunc store_temp<u64> = store_temp<u64>;
 libfunc felt252_dict_entry_finalize<u64> = felt252_dict_entry_finalize<u64>;
+libfunc const_as_immediate<Const<felt252, 280991720293>> = const_as_immediate<Const<felt252, 280991720293>>;
 libfunc const_as_immediate<Const<u64, 500>> = const_as_immediate<Const<u64, 500>>;
 libfunc const_as_immediate<Const<u64, 600>> = const_as_immediate<Const<u64, 600>>;
 libfunc const_as_immediate<Const<u64, 700>> = const_as_immediate<Const<u64, 700>>;
@@ -44,7 +46,7 @@ drop<u64>([7]) -> (); // 6
 const_as_immediate<Const<u64, 100>>() -> ([8]); // 7
 store_temp<u64>([8]) -> ([8]); // 8
 felt252_dict_entry_finalize<u64>([6], [8]) -> ([9]); // 9
-const_as_immediate<Const<felt252, 358251065198>>() -> ([10]); // 10
+const_as_immediate<Const<felt252, 280991720293>>() -> ([10]); // 10
 store_temp<felt252>([10]) -> ([10]); // 11
 felt252_dict_entry_get<u64>([9], [10]) -> ([11], [12]); // 12
 drop<u64>([12]) -> (); // 13
