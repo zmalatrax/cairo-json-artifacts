@@ -15,6 +15,6 @@ The `src` folder contains the Cairo programs `*.cairo`, the Sierra file `*.sierr
 | Makefile target command      | Description                                                 |
 | ---------------------------- | ----------------------------------------------------------- |
 | `make build`                 | Compiles `cairo-compile` and `sierra-compile-json` binaries |
-| `make compile`               | Compile all Cairo programs in `src/`                        |
-| `make build-cairo-compiler`  | Compile `cairo-compile` binary                              |
-| `make build-sierra-compiler` | Compile `sierra-compile-json` binary                        |
+| `make compile`               | Compiles all Cairo programs in `src/`                       |
+| `make build-cairo-compiler`  | Compiles `cairo-compile` binary                             |
+| `make build-sierra-compiler` | Compiles `sierra-compile-json` binary                       |
