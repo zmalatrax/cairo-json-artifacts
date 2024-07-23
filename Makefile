@@ -1,4 +1,4 @@
-.PHONY: build-cairo-compiler build-sierra-compiler build-cairo
+.PHONY: build-cairo-compiler build-sierra-compiler build
 
 
 CAIRO_COMPILER=cairo/target/release/cairo-compile
@@ -14,7 +14,7 @@ $(SIERRA_COMPILER):
 
 build-cairo-compiler: | $(CAIRO_COMPILER)
 build-sierra-compiler: | $(SIERRA_COMPILER)
-build-cairo: build-cairo-compiler build-sierra-compiler
+build: build-cairo-compiler build-sierra-compiler
 
 CAIRO_PATH=src/
 CAIRO_FILES:=$(shell find $(CAIRO_PATH) -name '*.cairo')
